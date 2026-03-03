@@ -58,20 +58,15 @@ jobs:
         env:
           VERSION: ${{ steps.version.outputs.version }}
         run: |
-          if [[ "$VERSION" == *"-beta"* ]] || [[ "$VERSION" == *"-alpha"* ]];
+          if [[ "$VERSION" == *"-beta"* ]] || [[ "$VERSION" == *"-alpha"* ]] || [[ "$VERSION" == *"-SNAPSHOT"* ]];
           then
             echo "is_prerelease=true" >> $GITHUB_OUTPUT
-            echo "is_release=false" >> $GITHUB_OUTPUT
-            echo "⚠️ Pre-release detected: $VERSION"
-          elif [[ "${{ github.ref }}" == "refs/heads/release/"* ]];
-          then
             echo "is_release=true" >> $GITHUB_OUTPUT
-            echo "is_prerelease=false" >> $GITHUB_OUTPUT
-            echo "✅ Release branch detected"
+            echo "⚠️ Pre-release detected: $VERSION"
           else
-            echo "is_release=false" >> $GITHUB_OUTPUT
             echo "is_prerelease=false" >> $GITHUB_OUTPUT
-            echo "📝 Development build"
+            echo "is_release=true" >> $GITHUB_OUTPUT
+            echo "✅ Regular release detected"
           fi
 
   # ============================================================================
@@ -399,4 +394,3 @@ jobs:
           echo "📊 Compilation Time Analysis"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           time mvn clean compile -DskipTests -q --no-transfer-progress
-
