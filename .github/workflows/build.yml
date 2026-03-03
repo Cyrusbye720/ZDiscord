@@ -297,6 +297,10 @@ jobs:
           VERSION="${{ needs.validate.outputs.version }}"
           TAG="v$VERSION"
           
+          # Configure custom Git identity for DemonZ Development
+          git config user.name "DemonZ Deployer bot"
+          git config user.email "deployer@demonz.dev"
+          
           if git rev-parse "$TAG" >/dev/null 2>&1;
           then
             echo "✅ Tag $TAG already exists"
