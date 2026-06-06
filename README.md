@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="images/banner.png" alt="ZDiscord" width="100%">
-
 # ZDiscord
 
 Discord integration for Minecraft servers.
