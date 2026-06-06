@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="images/logo.png" alt="ZDiscord" width="128" height="128">
+
 # ZDiscord
 
 Discord integration for Minecraft servers.
