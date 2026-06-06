@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/logo.png" alt="ZDiscord" width="128" height="128">
+<img src="images/banner.png" alt="ZDiscord" width="100%">
 
 # ZDiscord
 

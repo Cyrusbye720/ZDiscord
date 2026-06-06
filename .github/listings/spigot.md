@@ -1,5 +1,9 @@
 # SpigotMC listing
 
+## Banner / icon
+
+Upload `images/banner.png` (1280×720) as the resource banner. For the square icon shown in the resource list, crop the centre of the banner to a square using `scripts/crop-banner.js` to produce `banner-square.png`.
+
 ## Title
 
 ZDiscord — Discord integration for Paper / Folia / Spigot

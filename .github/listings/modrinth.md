@@ -1,5 +1,9 @@
 # Modrinth listing
 
+## Banner / cover image
+
+Upload `images/banner.png` (1280×720) as the project cover. For a square icon, crop the centre using `scripts/crop-banner.js` to produce `banner-square.png`.
+
 ## Project slug
 
 `zdiscord`

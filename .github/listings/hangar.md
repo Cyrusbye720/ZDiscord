@@ -1,5 +1,9 @@
 # Paper Hangar listing
 
+## Banner / icon
+
+Upload `images/banner.png` (1280×720) as the project banner. For the project avatar / icon, crop the centre of the banner to a square using `scripts/crop-banner.js` to produce `banner-square.png`.
+
 ## Project name
 
 ZDiscord
